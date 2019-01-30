@@ -3,11 +3,13 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.13.0",
     "aws-amplify": "^1.1.19",
     "google-maps-react": "^2.0.2",
     "react": "^16.7.0",
     "react-bootstrap": "^0.32.4",
     "react-dom": "^16.7.0",
+    "react-icons": "^3.3.0",
     "react-mdl": "^1.11.0",
     "react-scripts": "2.1.2"
   },

@@ -3,7 +3,7 @@ import { Button } from "react-bootstrap";
 import { Link, Route, Switch } from "react-router-dom";
 import { Footer, FooterLinkList, FooterSection, FooterDropDownSection } from 'react-mdl';
 import "./Firstpage.css";
-import { Layout, Header, Navigation, Drawer, Content } from "react-mdl";
+import { Layout, Header, Navigation, Drawer, Content, IconButton, MenuItem, Menu } from "react-mdl";
 
 //import  RevLogin  from "./Components/RevLogin";
 
@@ -16,16 +16,50 @@ class Firstpage extends Component {
       //  <Link to="/RevLogin">Revenue Head</Link>
       // <Link to="/SecLogin"> Section Head</Link>
 
-      <div className="wrapper">
-        <Button bsStyle="primary" bsSize="large" block onClick={this.onPageChange} style={{ width: '400px' }} name="/rev/login">
-          Revenue Head
+
+      <div style={{ height: '100vh', position: 'relative' }}>
+        <Layout fixedHeader>
+          <Header className="Header" title={<span><strong>MMDA</strong></span>}>
+            <Navigation>
+              <div style={{ position: 'relative' }}>
+                <IconButton name="more_vert" id="demo-menu-top-right" />
+                <Menu target="demo-menu-top-right" valign="bottom" align="right" ripple>
+                  <MenuItem>How to use Software ?</MenuItem>
+                  <MenuItem>Exit</MenuItem>
+
+                </Menu>
+              </div>
+            </Navigation>
+          </Header>
+          <Content className="wrapper">
+
+            <Button bsStyle="primary" bsSize="large" block onClick={this.onPageChange}
+              style={{ width: '400px', margin: '200px auto 10px', height: '80px' }} name="/rev/login" >
+              Revenue Head
        </Button>
 
 
-        <Button bsSize="large" block onClick={this.onPageChange} style={{ width: '400px' }} name="/sec/login">
-          Sectional Head
+            <Button bsSize="large" block onClick={this.onPageChange} style={{ width: '400px', margin: '0 auto 10px', height: '80px' }} name="/sec/login">
+              Sectional Head
        </Button>
-      </div>
+
+          </Content>
+          <Footer className="footer" size="mini" style={{ height: '10px' }}>
+            <FooterSection type="right" logo="MMDA">
+              <FooterLinkList>
+                <a href="/">Help</a>
+                <a href="/">Privacy & Terms</a>
+              </FooterLinkList>
+            </FooterSection>
+          </Footer>
+
+
+
+        </Layout>
+      </div >
+
+
+
 
     );
   }

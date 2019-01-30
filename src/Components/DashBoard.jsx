@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Tabs, Tab, Grid, Cell, Card, CardTitle, CardActions, Button, CardMenu, CardText, IconButton, Footer, FooterLinkList, FooterSection, Table, TableHeader } from 'react-mdl';
-
+import { ITiChartBar } from "react-icons/ti";
 class DashBoard extends Component {
   constructor(props) {
     super(props);
@@ -10,7 +10,9 @@ class DashBoard extends Component {
   toggleCategories() {
     if (this.state.activeTab === 0) {
       return (
-        <div className="DashBoard-grid">
+
+        <div className="DashBoard-grid"
+        >
           <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
             <CardTitle style={{ height: '170px', background: 'url(https://cdn1.vectorstock.com/i/1000x1000/31/95/user-sign-icon-person-symbol-human-avatar-vector-12693195.jpg) center /cover' }}> Section Head 2</CardTitle>
 
@@ -37,6 +39,18 @@ class DashBoard extends Component {
           </Card>
           <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
             <CardTitle style={{ height: '170px', background: 'url(https://cdn1.vectorstock.com/i/1000x1000/31/95/user-sign-icon-person-symbol-human-avatar-vector-12693195.jpg) center /cover' }}> Section Head 1</CardTitle>
+
+            <CardText>
+              Hello i'm a Section Head in Ghana
+           </CardText>
+            <CardActions border>
+              <Button colored>Open</Button>
+            </CardActions>
+            <CardMenu style={{ color: '#fff' }}>
+            </CardMenu>
+          </Card>
+          <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
+            <CardTitle style={{ height: '170px', background: 'url(https://cdn1.vectorstock.com/i/1000x1000/31/95/user-sign-icon-person-symbol-human-avatar-vector-12693195.jpg) center /cover' }}> Section Head 2</CardTitle>
 
             <CardText>
               Hello i'm a Section Head in Ghana
@@ -200,6 +214,7 @@ class DashBoard extends Component {
   }
   render() {
     return (
+
       <div className="category-tabs">
         <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
           <Tab>Sectional Heads</Tab>
@@ -210,13 +225,19 @@ class DashBoard extends Component {
 
         <Grid >
           <Cell col={12}>
-            <div className="content">{this.toggleCategories()}
+            <div className="content" style={{
+              background: '#D3CCE3',  /* fallback for old browsers */
+              background: '-webkit-linear-gradient(to left, #E9E4F0, #D3CCE3)',  /* Chrome 10-25, Safari 5.1-6 */
+              background: 'linear-gradient(to left, #E9E4F0, #D3CCE3)' /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+            }}>{this.toggleCategories()}
             </div>
           </Cell>
         </Grid>
 
 
       </div >
+
+
     )
 
   }
