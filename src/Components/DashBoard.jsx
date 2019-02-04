@@ -11,63 +11,58 @@ class DashBoard extends Component {
     if (this.state.activeTab === 0) {
       return (
 
-        <div className="DashBoard-grid"
-        >
-          <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-            <CardTitle style={{ height: '170px', background: 'url(https://cdn1.vectorstock.com/i/1000x1000/31/95/user-sign-icon-person-symbol-human-avatar-vector-12693195.jpg) center /cover' }}> Section Head 2</CardTitle>
-
+        <div className="wrap">
+          <Card shadow={0} style={{ width: '500px', height: '320px', padding: '10px' }}>
+            <CardTitle expand style={{ color: '#fff', background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC' }}>Update</CardTitle>
             <CardText>
-              Hello i'm a Section Head in Ghana
-           </CardText>
-            <CardActions border>
-              <Button colored>Open</Button>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Aenan convallis.
+        </CardText>
+            <CardActions border >
+              <Button colored>OPEN</Button>
             </CardActions>
-            <CardMenu style={{ color: '#fff' }}>
-            </CardMenu>
           </Card>
-          <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-            <CardTitle style={{ height: '170px', background: 'url(https://cdn1.vectorstock.com/i/1000x1000/31/95/user-sign-icon-person-symbol-human-avatar-vector-12693195.jpg) center /cover' }}> Section Head 3</CardTitle>
 
+          <Card shadow={0} style={{ width: '500px', height: '320px', margin: 'auto', padding: '10px' }}>
+            <CardTitle expand style={{ color: '#fff', background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC' }}>Update</CardTitle>
             <CardText>
-              Hello i'm a Section Head in Ghana
-           </CardText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aenan convallis.
+    </CardText>
             <CardActions border>
-              <Button colored>Open</Button>
+              <Button colored>OPEN</Button>
             </CardActions>
-            <CardMenu style={{ color: '#fff' }}>
-            </CardMenu>
           </Card>
-          <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-            <CardTitle style={{ height: '170px', background: 'url(https://cdn1.vectorstock.com/i/1000x1000/31/95/user-sign-icon-person-symbol-human-avatar-vector-12693195.jpg) center /cover' }}> Section Head 1</CardTitle>
 
+          <Card shadow={0} style={{ width: '500px', height: '320px', margin: 'auto', padding: '10px' }}>
+            <CardTitle expand style={{ color: '#fff', background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC' }}>Update</CardTitle>
             <CardText>
-              Hello i'm a Section Head in Ghana
-           </CardText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Aenan convallis.
+</CardText>
             <CardActions border>
-              <Button colored>Open</Button>
+              <Button colored>OPEN</Button>
             </CardActions>
-            <CardMenu style={{ color: '#fff' }}>
-            </CardMenu>
           </Card>
-          <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
-            <CardTitle style={{ height: '170px', background: 'url(https://cdn1.vectorstock.com/i/1000x1000/31/95/user-sign-icon-person-symbol-human-avatar-vector-12693195.jpg) center /cover' }}> Section Head 2</CardTitle>
 
+          <Card shadow={0} style={{ width: '500px', height: '320px', margin: 'auto', padding: '10px' }}>
+            <CardTitle expand style={{ color: '#fff', background: 'url(http://www.getmdl.io/assets/demos/dog.png) bottom right 15% no-repeat #46B6AC' }}>Update</CardTitle>
             <CardText>
-              Hello i'm a Section Head in Ghana
-           </CardText>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+    Aenan convallis.
+</CardText>
             <CardActions border>
-              <Button colored>Open</Button>
+              <Button colored>OPEN</Button>
             </CardActions>
-            <CardMenu style={{ color: '#fff' }}>
-            </CardMenu>
           </Card>
+
 
         </div>
       )
     } else if (this.state.activeTab === 1) {
       return (
         <div className="DashBoard-grid">
-          <Card shadow={5} style={{ minWidth: '450', margin: 'auto' }}>
+          <Card shadow={5} style={{ minWidth: '450px', margin: 'auto', aligItems: 'left' }}>
             <CardTitle style={{ height: '170px', background: 'url(https://previews.123rf.com/images/yupiramos/yupiramos1609/yupiramos160912719/62358443-avatar-man-smiling-cartoon-male-person-user-vector-illustration.jpg) center /cover' }}> Toll Collector 1</CardTitle>
 
             <CardText>
@@ -221,21 +216,19 @@ class DashBoard extends Component {
           <Tab> Toll Collectors</Tab>
           <Tab>Accounting Information</Tab>
         </Tabs>
+        <div className="DashBoard-grid">
 
 
-        <Grid >
-          <Cell col={12}>
-            <div className="content" style={{
-              background: '#D3CCE3',  /* fallback for old browsers */
-              background: '-webkit-linear-gradient(to left, #E9E4F0, #D3CCE3)',  /* Chrome 10-25, Safari 5.1-6 */
-              background: 'linear-gradient(to left, #E9E4F0, #D3CCE3)' /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-            }}>{this.toggleCategories()}
-            </div>
-          </Cell>
-        </Grid>
+          <Grid >
+            <Cell col={12}>
+              <div className="content">{this.toggleCategories()}
+              </div>
+            </Cell>
+          </Grid>
 
 
-      </div >
+        </div >
+      </div>
 
 
     )

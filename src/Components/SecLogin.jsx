@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import "./SecLogin.css";
 import { Button } from "react-bootstrap";
+import { Layout, Header, Navigation, Drawer, Content, IconButton, MenuItem, Menu } from "react-mdl";
 
 const formValid = ({ formErrors, ...rest }) => {
   let valid = true;
@@ -74,37 +75,47 @@ class SecLogin extends Component {
   render() {
     const { formErrors } = this.state;
     return (
-      <div className="wrapper">
-        <div className="form-wrapper">
-          <h1>Section Head Login</h1>
-          <form>
-            <div className="Username">
-              <label htmlFor="Username">Username</label>
-              <input className={formErrors.Username.length > 0 ? "error" : null}
-                placeholder="Username"
-                type="text"
-                name="Username"
-                value={this.state.Username}
-                noValidate
-                onChange={this.handleChange}
-              />
+      <div style={{ height: '100vh', position: 'relative' }}>
+        <Layout fixedHeader>
+          <Header className="Header" title={<span><strong>MMDA</strong></span>}>
+            <Navigation>
+
+            </Navigation>
+          </Header>
+          <Content className="wrapper">
+            <div className="form-wrapper">
+              <h1>Section Head Login</h1>
+              <form>
+                <div className="Username">
+                  <label htmlFor="Username">Username</label>
+                  <input className={formErrors.Username.length > 0 ? "error" : null}
+                    placeholder="Username"
+                    type="text"
+                    name="Username"
+                    value={this.state.Username}
+                    noValidate
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="password">
+                  <label htmlFor="password">Password</label>
+                  <input className={formErrors.password.length > 0 ? "error" : null}
+                    placeholder="Password"
+                    type="password"
+                    name="password"
+                    value={this.state.password}
+                    noValidate
+                    onChange={this.handleChange}
+                  />
+                </div>
+                <div className="Login">
+                  <Button type="submit" onClick={this.onPageChange} name="/dashboard">Login</Button>
+                </div>
+              </form>
             </div>
-            <div className="password">
-              <label htmlFor="password">Password</label>
-              <input className={formErrors.password.length > 0 ? "error" : null}
-                placeholder="Password"
-                type="password"
-                name="password"
-                value={this.state.password}
-                noValidate
-                onChange={this.handleChange}
-              />
-            </div>
-            <div className="Login">
-              <Button type="submit" onClick={this.onPageChange} name="/dashboard">Login</Button>
-            </div>
-          </form>
-        </div>
+          </Content>
+        </Layout>
+
       </div>
     );
   }

@@ -45,7 +45,7 @@ class Firstpage extends Component {
 
           </Content>
           <Footer className="footer" size="mini" style={{ height: '10px' }}>
-            <FooterSection type="right" logo="MMDA">
+            <FooterSection type="right" logo="Copyright &copy; 2019 MMDA">
               <FooterLinkList>
                 <a href="/">Help</a>
                 <a href="/">Privacy & Terms</a>
