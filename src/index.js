@@ -6,6 +6,7 @@ import * as serviceWorker from "./serviceWorker";
 import "bootstrap/dist/css/bootstrap.css";
 import "react-mdl/extra/material.css";
 import "react-mdl/extra/material.js";
+
 //import registerServiceWorker from "./registerServiceWorker";
 ReactDOM.render(
   <App />,

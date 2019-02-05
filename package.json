@@ -8,10 +8,12 @@
     "google-maps-react": "^2.0.2",
     "react": "^16.7.0",
     "react-bootstrap": "^0.32.4",
+    "react-chartist": "^0.13.3",
     "react-dom": "^16.7.0",
     "react-icons": "^3.3.0",
     "react-mdl": "^1.11.0",
-    "react-scripts": "2.1.2"
+    "react-scripts": "2.1.2",
+    "semantic-ui-css": "^2.4.1"
   },
   "scripts": {
     "start": "react-scripts start",
