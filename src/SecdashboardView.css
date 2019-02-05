@@ -1,0 +1,58 @@
+.drawer{
+    background: #654ea3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #eaafc8, #654ea3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #eaafc8, #654ea3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+  }
+  .Landing-grid {
+    background: #D3CCE3;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to left, #DED8E7, #D3CCE3);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to left, #E9E4F0, #D3CCE3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   
+    text-align:center;
+    position:fixed;
+    top:0;
+    width:100%;
+    height:100%;
+  }
+  .avatar-img {
+    height:450px;
+    padding-top:5em;
+   
+    
+  }  
+  .banner-text{
+    background-color: black;
+    opacity:.6;
+    width:75%;
+    margin:auto;
+    border-radius:10px;
+    
+  }
+  .banner-text h1 {
+    font-size:66px;
+    font-weight:bold;
+    color:white;
+   text-align:center; 
+  }
+  .banner-text hr{
+    border-top:5px solid white;
+    border-bottom:2px;
+    width:50%;
+    margin:auto;
+  }
+  .banner-text p{
+    color:white;
+    font-size: 20px;
+    padding:1em;
+    text-align:center; 
+  }
+  .DashBoard-grid{
+    display :flex;
+    flex-direction: column;
+    border-left:solid 1px black;
+    border-left-width: 2px;
+    border-right:solid 1px black;
+    border-right-width: 2px;
+    padding:30px;
+  }

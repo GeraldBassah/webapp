@@ -7,23 +7,23 @@ import Routes from "./Components/Routes";
 import { Layout, Header, Navigation, Drawer, Content } from "react-mdl";
 
 
-class DashboardView extends Component {
+class SecDashboardView extends Component {
     render() {
         return (
             <div className="demo-big-content">
                 <Layout>
                     <Header className="header-color" title={<Link style={{ textDecoration: 'none', color: 'white' }} to="/dashboard">MMDA SECTION HEAD</Link>} scroll>
                         <Navigation>
-                            <Link to="/dashboard/main">DashBoard</Link>
-                            <Link to="/dashboard/logout">Logout</Link>
+                            <Link to="sec/dashboard/main">DashBoard</Link>
+                            <Link to="sec/dashboard/logout">Logout</Link>
                         </Navigation>
                     </Header>
                     <Drawer className="drawer" title="WELCOME" >
                         <Navigation>
-                            <Link to="/dashboard/main">DashBoard</Link>
-                            <Link to="/dashboard/activeCollectors">Active Collectors</Link>
-
-                            <Link to="/dashboard/help">Help</Link>
+                            <Link to="sec/dashboard/main">DashBoard</Link>
+                            <Link to="sec/dashboard/activeCollectors">Active Collectors</Link>
+                            <Link to="sec/dashboard/help">Help</Link>
+                            <Link to="sec/dashboard/help">Help</Link>
                         </Navigation>
                     </Drawer>
                     <Content>
@@ -36,4 +36,4 @@ class DashboardView extends Component {
     }
 }
 
-export default DashboardView;
+export default SecDashboardView;
