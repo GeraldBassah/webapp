@@ -24,7 +24,7 @@ class DashboardView extends Component {
                         <Navigation>
                             <Link to="/dashboard/main"><i class="fas fa-signal"></i> DashBoard</Link>
                             <Link to="/dashboard/activeCollectors"><i class="fas fa-walking"></i> Active Collectors</Link>
-                            <Link to="/rev/signup"><i class="fas fa-user-plus"></i>SignUp Sectional Head</Link>
+                            <Link to="/rev/signup"><i class="fas fa-user-plus"></i>Add Sectional Head</Link>
                             <Link to="/dashboard/help"><i class="fas fa-question-circle"></i> Help</Link>
                         </Navigation>
                     </Drawer>

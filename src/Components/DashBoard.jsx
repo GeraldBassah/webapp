@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Cell, Card, CardTitle, CardActions, Button, CardMenu, CardText, IconButton, Footer, FooterLinkList, FooterSection, Table, TableHeader } from 'react-mdl';
-import { Grid, Row, Col } from "react-bootstrap";
+import { Tabs, Tab, Cell, Grid, ListItem, DataTable, ListItemAction, List, Icon, ListItemContent, Button, CardMenu, CardText, IconButton, Footer, FooterLinkList, FooterSection, TableHeader } from 'react-mdl';
+import { Table } from 'react-bootstrap';
 
 
 
@@ -14,59 +14,162 @@ class DashBoard extends Component {
     if (this.state.activeTab === 0) {
       return (
 
-        <div className="content">
-          <Grid fluid>
-            <Row>
-              <Col lg={3} sm={6}>
+        <div>
+          <List style={{ width: '650px', padding: '10px', border: '1px solid black' }}>
+            <ListItem threeLine>
+              <ListItemContent avatar="person" subtitle="Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle.">Bryan Cranston</ListItemContent>
+              <ListItemAction>
+                <Button raised accent ripple>View</Button>
+              </ListItemAction>
+            </ListItem>
+          </List>
+          <List style={{ width: '650px', padding: '10px', border: '1px solid black' }}>
+            <ListItem threeLine>
+              <ListItemContent avatar="person" subtitle="Aaron Paul played the role of Jesse in Breaking Bad. He also featured in the Need For Speed Movie.">Aaron Paul</ListItemContent>
+              <ListItemAction>
+                <Button raised accent ripple>View</Button>
+              </ListItemAction>
+            </ListItem>
+          </List>
+          <List style={{ width: '650px', padding: '10px', border: '1px solid black' }}>
+            <ListItem threeLine>
+              <ListItemContent avatar="person" subtitle="Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the character, Bob stars in his own show now, called Better Call Saul.">Bob Odenkirk</ListItemContent>
+              <ListItemAction>
+                <Button raised accent ripple>View</Button>
+              </ListItemAction>
+            </ListItem>
+          </List>
+          <List style={{ width: '650px', padding: '10px', border: '1px solid black' }}>
+            <ListItem threeLine>
+              <ListItemContent avatar="person" subtitle="Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the character, Bob stars in his own show now, called Better Call Saul.">Bob Odenkirk</ListItemContent>
+              <ListItemAction>
+                <Button raised accent ripple>View</Button>
+              </ListItemAction>
+            </ListItem>
+          </List>
+          <List style={{ width: '650px', padding: '10px', border: '1px solid black' }}>
+            <ListItem threeLine>
+              <ListItemContent avatar="person" subtitle="Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the character, Bob stars in his own show now, called Better Call Saul.">Bob Odenkirk</ListItemContent>
+              <ListItemAction>
+                <Button raised accent ripple>View</Button>
+              </ListItemAction>
+            </ListItem>
+          </List>
 
-              </Col>
-            </Row>
-          </Grid>
         </div>
       )
     } else if (this.state.activeTab === 1) {
       return (
         <div >
-          <Card shadow={0} style={{ width: '500px', height: '200px', padding: '10px' }}>
-            <CardTitle style={{ height: '170px', background: 'url(https://previews.123rf.com/images/yupiramos/yupiramos1609/yupiramos160912719/62358443-avatar-man-smiling-cartoon-male-person-user-vector-illustration.jpg) center /cover' }}> Toll Collector 1</CardTitle>
-
-            <CardText>
-              Hello i'm a toll collector in Ghana
-         </CardText>
-            <CardActions border>
-              <Button colored>Open</Button>
-            </CardActions>
-            <CardMenu style={{ color: '#fff' }}>
-            </CardMenu>
-          </Card>
-          <Card shadow={0} style={{ width: '500px', height: '200px', padding: '10px' }}>
-            <CardTitle style={{ height: '170px', background: 'url(https://previews.123rf.com/images/yupiramos/yupiramos1609/yupiramos160912719/62358443-avatar-man-smiling-cartoon-male-person-user-vector-illustration.jpg) center /cover' }}> Toll Collector 2</CardTitle>
-
-            <CardText>
-              Hello i'm a toll collector in Ghana
-         </CardText>
-            <CardActions border>
-              <Button colored>Open</Button>
-            </CardActions>
-            <CardMenu style={{ color: '#fff' }}>
-            </CardMenu>
-          </Card>
-          <Card shadow={0} style={{ width: '500px', height: '200px', padding: '10px' }}>
-            <CardTitle style={{ height: '170px', background: 'url(https://previews.123rf.com/images/yupiramos/yupiramos1609/yupiramos160912719/62358443-avatar-man-smiling-cartoon-male-person-user-vector-illustration.jpg) center /cover' }}> Toll Collector 3</CardTitle>
-
-            <CardText>
-              Hello i'm a toll collector in Ghana
-         </CardText>
-            <CardActions border>
-              <Button colored>Open</Button>
-            </CardActions>
-            <CardMenu style={{ color: '#fff' }}>
-            </CardMenu>
-          </Card>
+          <List style={{ width: '650px', padding: '10px', border: '1px solid black' }}>
+            <ListItem threeLine>
+              <ListItemContent avatar="person" subtitle="Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle.">Bryan Cranston</ListItemContent>
+              <ListItemAction>
+                <Button raised accent ripple>View</Button>
+              </ListItemAction>
+            </ListItem>
+          </List>
+          <List style={{ width: '650px', padding: '10px', border: '1px solid black' }}>
+            <ListItem threeLine>
+              <ListItemContent avatar="person" subtitle="Aaron Paul played the role of Jesse in Breaking Bad. He also featured in the Need For Speed Movie.">Aaron Paul</ListItemContent>
+              <ListItemAction>
+                <Button raised accent ripple>View</Button>
+              </ListItemAction>
+            </ListItem>
+          </List>
+          <List style={{ width: '650px', padding: '10px', border: '1px solid black' }}>
+            <ListItem threeLine>
+              <ListItemContent avatar="person" subtitle="Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the character, Bob stars in his own show now, called Better Call Saul.">Bob Odenkirk</ListItemContent>
+              <ListItemAction>
+                <Button raised accent ripple>View</Button>
+              </ListItemAction>
+            </ListItem>
+          </List>
+          <List style={{ width: '650px', padding: '10px', border: '1px solid black' }}>
+            <ListItem threeLine>
+              <ListItemContent avatar="person" subtitle="Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the character, Bob stars in his own show now, called Better Call Saul.">Bob Odenkirk</ListItemContent>
+              <ListItemAction>
+                <Button raised accent ripple>View</Button>
+              </ListItemAction>
+            </ListItem>
+          </List>
+          <List style={{ width: '650px', padding: '10px', border: '1px solid black' }}>
+            <ListItem threeLine>
+              <ListItemContent avatar="person" subtitle="Bob Odinkrik played the role of Saul in Breaking Bad. Due to public fondness for the character, Bob stars in his own show now, called Better Call Saul.">Bob Odenkirk</ListItemContent>
+              <ListItemAction>
+                <Button raised accent ripple>View</Button>
+              </ListItemAction>
+            </ListItem>
+          </List>
         </div>
       )
     } else if (this.state.activeTab === 2) {
+      return (
+        <div style={{ width: '50%', backgroundColor: 'white' }}>
+          <Table striped bordered hover size="sm">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name Of MarketPlace</th>
+                <th>Number of Toll Collectors</th>
+                <th><span>(GH&#8373;)</span>Daily Revenue</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Kumasi Central Market</td>
+                <td>45</td>
+                <td>2500.00</td>
 
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Asafo Market</td>
+                <td>20</td>
+                <td>1500.00</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Tech Market</td>
+                <td>12</td>
+                <td>1200.00</td>
+              </tr>
+            </tbody>
+          </Table>
+          <Table striped bordered hover size="sm">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Name Of MarketPlace</th>
+                <th>Number of Toll Collectors</th>
+                <th><span>(GH&#8373;)</span>Daily Revenue</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Kumasi Central Market</td>
+                <td>45</td>
+                <td>2500.00</td>
+
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Asafo Market</td>
+                <td>20</td>
+                <td>1500.00</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Tech Market</td>
+                <td>12</td>
+                <td>1200.00</td>
+              </tr>
+            </tbody>
+          </Table>
+        </div>
+      )
     }
 
   }
