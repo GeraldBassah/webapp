@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import "./RevSignup.css";
 import { Button } from 'react-bootstrap';
-import { Layout, Header, Navigation, Drawer, Content, IconButton, MenuItem, Menu } from "react-mdl";
+import { Layout, Header, Navigation, Content } from "react-mdl";
 
-const emailRegex = RegExp(/^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
+const emailRegex = RegExp(/^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@(([0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/)
 
 const formValid = ({ formErrors, ...rest }) => {
     let valid = true;

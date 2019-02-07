@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./SecLogin.css";
 import { Button } from "react-bootstrap";
-import { Layout, Header, Navigation, Drawer, Content, IconButton, MenuItem, Menu } from "react-mdl";
+import { Layout, Header, Navigation, Content } from "react-mdl";
 
 const formValid = ({ formErrors, ...rest }) => {
   let valid = true;

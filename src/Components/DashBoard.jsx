@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Tabs, Tab, Cell, Grid, ListItem, DataTable, ListItemAction, List, Icon, ListItemContent, Button, CardMenu, CardText, IconButton, Footer, FooterLinkList, FooterSection, TableHeader } from 'react-mdl';
+import { Tabs, Tab, Cell, Grid, ListItem, ListItemAction, List, ListItemContent, Button } from 'react-mdl';
 import { Table } from 'react-bootstrap';
+
 
 
 
@@ -65,7 +66,7 @@ class DashBoard extends Component {
             <ListItem threeLine>
               <ListItemContent avatar="person" subtitle="Bryan Cranston played the role of Walter in Breaking Bad. He is also known for playing Hal in Malcom in the Middle.">Bryan Cranston</ListItemContent>
               <ListItemAction>
-                <Button raised accent ripple>View</Button>
+                <Button onClick={this.onPageChange} raised accent ripple name="/dashboard/main/PageInfo">View</Button>
               </ListItemAction>
             </ListItem>
           </List>
@@ -73,7 +74,7 @@ class DashBoard extends Component {
             <ListItem threeLine>
               <ListItemContent avatar="person" subtitle="Aaron Paul played the role of Jesse in Breaking Bad. He also featured in the Need For Speed Movie.">Aaron Paul</ListItemContent>
               <ListItemAction>
-                <Button raised accent ripple>View</Button>
+                <Button raised accent ripple >View</Button>
               </ListItemAction>
             </ListItem>
           </List>
@@ -174,6 +175,7 @@ class DashBoard extends Component {
 
   }
   render() {
+
     return (
       <div className="category-tabs">
         <Tabs activeTab={this.state.activeTab} onChange={(tabId) => this.setState({ activeTab: tabId })} ripple>
@@ -197,5 +199,10 @@ class DashBoard extends Component {
 
 
   }
+  onPageChange = (e) => {
+    this.props.history.push(e.target.name);
+  };
+
 }
+
 export default DashBoard;

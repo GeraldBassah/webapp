@@ -9,7 +9,7 @@ class LandingPage extends Component {
           <Cell col={12}>
             <img src="https://cdn.pixabay.com/photo/2016/08/20/05/38/avatar-1606916__340.png" alt="avatar" className="avatar-img" />
             <div className="banner-text">
-              <h1>E-TOLL WELCOMES YOU</h1>
+              <h1>MMDA SUITE WELCOMES YOU</h1>
 
               <hr />
 

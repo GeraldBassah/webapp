@@ -1,9 +1,8 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
-import { Link, Route, Switch } from "react-router-dom";
-import { Footer, FooterLinkList, FooterSection, FooterDropDownSection } from 'react-mdl';
+import { Footer, FooterLinkList, FooterSection } from 'react-mdl';
 import "./Firstpage.css";
-import { Layout, Header, Navigation, Drawer, Content, IconButton, MenuItem, Menu } from "react-mdl";
+import { Layout, Header, Navigation, Content, IconButton, MenuItem, Menu } from "react-mdl";
 
 //import  RevLogin  from "./Components/RevLogin";
 

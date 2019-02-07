@@ -6,7 +6,7 @@ import Home from "./Home";
 import DashBoard from "./DashBoard";
 import Help from "./Help";
 import ActiveCollectors from "./ActiveCollectors";
-import RevSignUp from "./RevSignup";
+import PageInfo from "./PageInfo";
 
 
 const Routes = () => (
@@ -17,6 +17,7 @@ const Routes = () => (
     <Route exact path="/dashboard/main" component={DashBoard} />
     <Route exact path="/dashboard/help" component={Help} />
     <Route exact path="/dashboard/activeCollectors" component={ActiveCollectors} />
+    <Routes exact path="/dashboard/main/PageInfo" component={PageInfo} />
   </Switch>
 )
 export default Routes;
