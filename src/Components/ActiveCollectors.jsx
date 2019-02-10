@@ -5,7 +5,7 @@ class ActiveCollectors extends Component {
     render() {
         return (
             <div>
-                <Map google={this.props.google} zoom={14}>
+                <Map google={this.props.google} zoom={10}>
 
                     <Marker onClick={this.onMarkerClick}
                         name={'Current location'} />
@@ -24,5 +24,5 @@ class ActiveCollectors extends Component {
 //export default ActiveCollectors;
 export default GoogleApiWrapper({
     apiKey:
-    (' AIzaSyA1qmMz4D7YKCJ2BsPtaLuTVGqA_M3Vf6M')
+        (' AIzaSyA1qmMz4D7YKCJ2BsPtaLuTVGqA_M3Vf6M')
 })(ActiveCollectors)
