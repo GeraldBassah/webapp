@@ -1,8 +1,14 @@
 import React, { Component } from "react";
 import { Button } from "react-bootstrap";
-import { Footer, FooterLinkList, FooterSection } from 'react-mdl';
+import { Link } from "react-scroll";
 import "./Firstpage.css";
-import { Layout, Header, Navigation, Content, IconButton, MenuItem, Menu } from "react-mdl";
+import fifth from "../img/fifth.jpg";
+import fourth from "../img/fourth.jpg";
+import third from "../img/third.jpg";
+import second from "../img/second.jpg";
+import first from "../img/first.jpg";
+import Features from "./features.jsx";
+
 
 //import  RevLogin  from "./Components/RevLogin";
 
@@ -11,54 +17,67 @@ class Firstpage extends Component {
 
   render() {
     return (
-      // <div className="entire">
-      //  <Link to="/RevLogin">Revenue Head</Link>
-      // <Link to="/SecLogin"> Section Head</Link>
+      <div>
 
+        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+          <a className="navbar-brand" href="/"><Link to="Home" smooth={true} >MMDA Suite</Link></a>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon"></span>
+          </button>
+          <div className="collapse navbar-collapse" id="navbarNav">
+            <ul className="navbar-nav ml-auto">
+              <li className="nav-item active">
+                <a className="nav-link" href="/"><Link to="Home" smooth={true} >Home</Link><span className="sr-only">(current)</span></a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/"><Link to="services" smooth={true} >Features</Link></a>
+              </li>
+              <li className="nav-item">
+                <a className="nav-link" href="/"><Link to="HowWorks" smooth={true} >How it works</Link></a>
+              </li>
+            </ul>
+          </div>
+        </nav>
 
-      <div style={{ height: '100vh', position: 'relative' }}>
-        <Layout fixedHeader>
-          <Header className="Header" title={<span><strong>MMDA</strong></span>}>
-            <Navigation>
-              <div style={{ position: 'relative' }}>
-                <IconButton name="more_vert" id="demo-menu-top-right" />
-                <Menu target="demo-menu-top-right" valign="bottom" align="right" ripple>
-                  <MenuItem>How to use Software ?</MenuItem>
-                  <MenuItem>Exit</MenuItem>
-
-                </Menu>
+        <div id="mycarousel">
+          <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
+            <div className="carousel-inner">
+              <div className="carousel-item active">
+                <img src={first} className="d-block w-100" alt="..." />
               </div>
-            </Navigation>
-          </Header>
-          <Content className="wrapper">
+              <div className="carousel-item">
+                <img src={second} className="d-block w-100" alt="..." />
+              </div>
+              <div className="carousel-item">
+                <img src={third} className="d-block w-100" alt="..." />
+              </div>
+              <div className="carousel-item">
+                <img src={fourth} className="d-block w-100" alt="..." />
+              </div>
+              <div className="carousel-item">
+                <img src={fifth} className="d-block w-100" alt="..." />
+              </div>
+            </div>
+          </div>
 
-            <Button bsStyle="primary" bsSize="large" block onClick={this.onPageChange}
-              style={{ width: '400px', margin: '200px auto 10px', height: '80px' }} name="/rev/login" >
+        </div>
+        <div id="mybuttons">
+          <div className="Buttons">
+            <Button variant="outline-dark" size="lg" block onClick={this.onPageChange} name="rev/login">
               Revenue Head
-       </Button>
-
-
-            <Button bsSize="large" block onClick={this.onPageChange} style={{ width: '400px', margin: '0 auto 10px', height: '80px' }} name="/sec/login">
+  </Button>
+            <Button variant="outline-dark" size="lg" block onClick={this.onPageChange} name="sec/login">
               Sectional Head
-       </Button>
-
-          </Content>
-          <Footer className="footer" size="mini" style={{ height: '10px' }}>
-            <FooterSection type="right" logo="Copyright &copy; 2019 MMDA">
-              <FooterLinkList>
-                <a href="/">Help</a>
-                <a href="/">Privacy & Terms</a>
-              </FooterLinkList>
-            </FooterSection>
-          </Footer>
+  </Button>
+          </div>
+        </div>
+        <div>
+          <Features />
+        </div>
 
 
 
-        </Layout>
-      </div >
-
-
-
+      </div>
 
     );
   }

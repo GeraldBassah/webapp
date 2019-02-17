@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import "./RevLogin.css";
 import { Button } from 'react-bootstrap';
+import { Link } from "react-scroll";
 import { Layout, Header, Navigation, Content } from "react-mdl";
 
 
@@ -77,46 +78,54 @@ class RevLogin extends Component {
         return (
 
 
-            <div style={{ height: '100vh', position: 'relative' }}>
-                <Layout fixedHeader>
-                    <Header className="Header" title={<span><strong>MMDA</strong></span>}>
-                        <Navigation>
+            <div>
+                <nav className="navbar navbar-expand-lg navbar-light bg-light">
+                    <a className="navbar-brand" href="/"><Link to="Home" smooth={true} >MMDA Suite</Link></a>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span className="navbar-toggler-icon"></span>
+                    </button>
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <ul className="navbar-nav ml-auto">
+                            <li className="nav-item">
+                                <a className="nav-link" href="/"><Link to="Home" smooth={true} >Home</Link></a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
 
-                        </Navigation>
-                    </Header>
-                    <Content className="wrapper">
-                        <div className="form-wrapper">
-                            <h1>Revenue Head Login</h1>
-                            <form onSubmit={this.handleSubmit}>
-                                <div className="Username">
-                                    <label htmlFor="Username">Username</label>
-                                    <input className={formErrors.Username.length > 0 ? "error" : null}
+                <Content className="wrapper">
+                    <div className="form-wrapper">
+                        <h1>Revenue Head Login</h1>
+                        <form onSubmit={this.handleSubmit}>
+                            <div className="Username">
+                                <label htmlFor="Username">Username</label>
+                                <input className={formErrors.Username.length > 0 ? "error" : null}
 
-                                        placeholder="Username"
-                                        type="text"
-                                        name="Username"
-                                        value={this.state.Username}
-                                        noValidate
-                                        onChange={this.handleChange} />
-                                </div>
-                                <div className="password">
-                                    <label htmlFor="password">Password</label>
-                                    <input className={formErrors.password.length > 0 ? "error" : null}
-                                        placeholder="Password"
-                                        type="password"
-                                        name="password"
-                                        value={this.state.password}
-                                        noValidate
-                                        onChange={this.handleChange} />
-                                </div>
-                                <div className="Login">
-                                    <Button block bsSize="large" type="submit" onClick={this.onPageChange} name="/dashboard" > Login</Button>
+                                    placeholder="Username"
+                                    type="text"
+                                    name="Username"
+                                    value={this.state.Username}
+                                    noValidate
+                                    onChange={this.handleChange} />
+                            </div>
+                            <div className="password">
+                                <label htmlFor="password">Password</label>
+                                <input className={formErrors.password.length > 0 ? "error" : null}
+                                    placeholder="Password"
+                                    type="password"
+                                    name="password"
+                                    value={this.state.password}
+                                    noValidate
+                                    onChange={this.handleChange} />
+                            </div>
+                            <div className="Login">
+                                <Button block bsSize="large" type="submit" onClick={this.onPageChange} name="/dashboard" > Login</Button>
 
-                                </div>
-                            </form>
-                        </div>
-                    </Content>
-                </Layout>
+                            </div>
+                        </form>
+                    </div>
+                </Content>
+
             </div>
 
         );
