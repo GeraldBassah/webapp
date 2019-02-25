@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Component } from "react";
 import "./features.css";
 
 class Features extends React.Component {
@@ -71,7 +71,7 @@ class Features extends React.Component {
 
                                     <div className="embed-responsive embed-responsive-16by9">
                                         <iframe class="embed-responsive-item"
-                                            src="https://www.youtube.com/embed/l4TzfPfLMB4"
+                                            src="https://www.youtube.com/embed/id6cbdso4x0"
                                             frameborder="0"
                                             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                                             allowfullscreen>

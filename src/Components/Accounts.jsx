@@ -1,16 +1,10 @@
 import React, { Component } from "react";
-import "./App.css";
-import "./App.js";
-import Routes from "./Components/Routes";
-import "./DashboardView.css";
-import "./Components/Accounts.jsx";
-import { Navbar, Nav } from 'react-bootstrap';
+import "./Accounts.css";
 
+class Accounts extends Component {
 
-
-
-class DashboardView extends Component {
     render() {
+
         return (
             <div>
                 <nav className="navbar navbar-expand-lg navbar navbar-dark bg-dark">
@@ -20,11 +14,11 @@ class DashboardView extends Component {
                     </button>
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
-                            <li className="nav-item active">
-                                <a className="nav-link" href="/revdashboard">Dashboard <span className="sr-only">(current)</span></a>
+                            <li className="nav-item ">
+                                <a className="nav-link" href="/revdashboard">Dashboard </a>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="/rev/Accounts">Accounts</a>
+                            <li className="nav-item active">
+                                <a className="nav-link" href="/rev/Accounts">Accounts<span className="sr-only">(current)</span></a>
                             </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -48,16 +42,7 @@ class DashboardView extends Component {
                             </li>
                         </ul>
 
-                        <ul className="navbar-nav ml-auto">
-                            <li className="nav-item">
-                                <a className="nav-link" style={{ color: 'white' }}><i className="fas fa-user-circle"> Welcome, Gerald</i></a>
-                            </li>
 
-                            <li className="nav-item active">
-                                <a className="nav-link" href="#">Logout</a>
-                            </li>
-
-                        </ul>
 
                     </div>
                 </nav>
@@ -65,7 +50,7 @@ class DashboardView extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-10">
-                                <h2><i className="fas fa-tachometer-alt"></i> Dashboard <small>Manage Your Site </small></h2>
+                                <h2><i className="far fa-money-bill-alt"></i> Accounts <small>Manage Your Accounts </small></h2>
                             </div>
                         </div>
                     </div>
@@ -75,7 +60,7 @@ class DashboardView extends Component {
                     <div className="container">
 
                         <ol className="breadcrumb">
-                            <li className="active">Dashboard</li>
+                            <li className="active">Accounts</li>
 
                         </ol>
                     </div>
@@ -86,10 +71,10 @@ class DashboardView extends Component {
                         <div className="row">
                             <div className="col-3">
                                 <div className="list-group">
-                                    <a href="/revdashboard" className="list-group-item list-group-item-action active main-color-bg">
+                                    <a href="/revdashboard" className="list-group-item list-group-item-action ">
                                         <i className="fas fa-tachometer-alt"></i> Dashboard
   </a>
-                                    <a href="/rev/Accounts" className="list-group-item list-group-item-action"><i className="far fa-money-bill-alt"></i> Accounts</a>
+                                    <a href="/rev/Accounts" className="list-group-item list-group-item-action active main-color-bg"><i className="far fa-money-bill-alt"></i> Accounts</a>
 
                                     <div className="dropdown">
                                         <a href="#" className="list-group-item list-group-item-action dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -212,11 +197,12 @@ class DashboardView extends Component {
 
 
 
-
-
         );
+
+
     }
+
+
+
 }
-
-export default DashboardView;
-
+export default Accounts;

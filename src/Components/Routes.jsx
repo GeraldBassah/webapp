@@ -8,6 +8,7 @@ import Help from "./Help";
 import ActiveCollectors from "./ActiveCollectors";
 import PageInfo from "./PageInfo";
 import LearnMore from "./LearnMore";
+import Accounts from "./Accounts";
 
 
 const Routes = () => (
@@ -19,7 +20,9 @@ const Routes = () => (
     <Route exact path="/dashboard/help" component={Help} />
     <Route exact path="/dashboard/activeCollectors" component={ActiveCollectors} />
     <Routes exact path="/dashboard/main/PageInfo" component={PageInfo} />
-    <Route exact path="/learnmore" component={LearnMore}/>
+    <Route exact path="/learnmore" component={LearnMore} />
+
+
   </Switch>
 )
 export default Routes;

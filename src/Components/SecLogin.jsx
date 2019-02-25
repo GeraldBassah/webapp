@@ -77,7 +77,7 @@ class SecLogin extends Component {
     return (
       <div style={{ height: '100vh', position: 'relative' }}>
         <Layout fixedHeader>
-          <Header className="Header" title={<span><strong>MMDA</strong></span>}>
+          <Header className="Header" title={<span><strong>MMDA SECTIONAL HEAD</strong></span>} style={{ background: '#333333' }}>
             <Navigation>
 
             </Navigation>
@@ -109,12 +109,17 @@ class SecLogin extends Component {
                   />
                 </div>
                 <div className="Login">
-                  <Button type="submit" onClick={this.onPageChange} name="/dashboard">Login</Button>
+                  <Button bsSize="large" bsStyle="primary" type="submit" onClick={this.onPageChange} name="/secdashboard">Login</Button>
                 </div>
               </form>
             </div>
           </Content>
+          <footer id="footer">
+            <p>Copyright MMDA, &copy; 2019</p>
+          </footer>
         </Layout>
+
+
 
       </div>
     );

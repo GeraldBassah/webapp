@@ -83,7 +83,7 @@ class RevSignup extends Component {
         return (
             <div style={{ height: '100vh', position: 'relative' }}>
                 <Layout fixedHeader>
-                    <Header className="Header" title={<span><strong>MMDA</strong></span>}>
+                    <Header className="Header" title={<span><strong>MMDA</strong></span>} style={{ background: '#333333' }}>
                         <Navigation>
 
                         </Navigation>
@@ -146,13 +146,15 @@ class RevSignup extends Component {
                                     )}
                                 </div>
                                 <div className="createAccount">
-                                    <Button type="submit">Create Account</Button>
+                                    <Button bsSize="large" bsStyle="primary" type="submit">Create Account</Button>
                                 </div>
                             </form>
                         </div>
 
                     </Content>
-
+                    <footer id="footer">
+                        <p>Copyright MMDA, &copy; 2019</p>
+                    </footer>
                 </Layout>
             </div>
 

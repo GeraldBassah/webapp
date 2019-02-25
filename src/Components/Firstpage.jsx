@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Button } from "react-bootstrap";
+import { Button, Grid } from "react-bootstrap";
 import { Link } from "react-scroll";
 import "./Firstpage.css";
 import fifth from "../img/fifth.jpg";
@@ -19,7 +19,7 @@ class Firstpage extends Component {
     return (
       <div>
 
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar fixed-top navbar-expand-lg navbar navbar-dark bg-dark">
           <a className="navbar-brand" href="/"><Link to="Home" smooth={true} >MMDA Suite</Link></a>
           <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
@@ -27,13 +27,13 @@ class Firstpage extends Component {
           <div className="collapse navbar-collapse" id="navbarNav">
             <ul className="navbar-nav ml-auto">
               <li className="nav-item active">
-                <a className="nav-link" href="/"><Link to="Home" smooth={true} >Home</Link><span className="sr-only">(current)</span></a>
+                <a className="nav-link" href="#"><Link to="Home" smooth={true} >Home</Link><span className="sr-only">(current)</span></a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/"><Link to="services" smooth={true} >Features</Link></a>
+                <a className="nav-link" href="#"><Link to="services" smooth={true} >Features</Link></a>
               </li>
               <li className="nav-item">
-                <a className="nav-link" href="/"><Link to="HowWorks" smooth={true} >How it works</Link></a>
+                <a className="nav-link" href="#"><Link to="HowWorks" smooth={true} >How it works</Link></a>
               </li>
             </ul>
           </div>
@@ -61,16 +61,21 @@ class Firstpage extends Component {
           </div>
 
         </div>
-        <div id="mybuttons">
-          <div className="Buttons">
-            <Button variant="outline-dark" size="lg" block onClick={this.onPageChange} name="rev/login">
+        <Grid >
+          <div id="mybuttons">
+
+            <Button bsStyle="primary" bsSize="large" block onClick={this.onPageChange}
+              name="/revlogin" >
               Revenue Head
-  </Button>
-            <Button variant="outline-dark" size="lg" block onClick={this.onPageChange} name="sec/login">
+               </Button>
+
+
+            <Button bsSize="large" bsStyle="primary" block onClick={this.onPageChange} name="/seclogin">
               Sectional Head
-  </Button>
+               </Button>
           </div>
-        </div>
+
+        </Grid>
         <div>
           <Features />
         </div>
