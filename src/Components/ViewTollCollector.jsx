@@ -49,7 +49,7 @@ class ViewTollCollector extends Component {
                     <div class="container">
                         <div class="row">
                             <div class="col-md-10">
-                                <h2><i class="fas fa-bullseye"></i> View Toll Collectors <small>Manage your Collectors </small></h2>
+                                <h2 style={{ color: 'white' }}><i class="fas fa-bullseye"></i> View Toll Collectors <small>Manage your Collectors </small></h2>
                             </div>
                         </div>
                     </div>
@@ -87,7 +87,7 @@ class ViewTollCollector extends Component {
                                         </div>
                                     </div>
                                     <div class="dropdown">
-                                        <a href="#" class="list-group-item list-group-item-action dropdown-toggle active main-color-bg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-walking"></i> Collectors</a>
+                                        <a href="#" class="list-group-item list-group-item-action dropdown-toggle active main-color-bg" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style={{ border: 'none' }}><i class="fas fa-walking" ></i> Collectors</a>
                                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <a class="dropdown-item" href="/rev/viewtollcollectors">View Toll Collectors</a>
                                             <div class="dropdown-divider"></div>
@@ -100,78 +100,150 @@ class ViewTollCollector extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-9">
-                                <div class="card ">
-                                    <h5 class="card-header main-color-bg">Featured</h5>
-                                    <div class="card-body">
+                            <div className="col-md-9">
+                                <div className="card ">
+                                    <h5 className="card-header main-color-bg" style={{ border: 'none' }}>Toll Collectors</h5>
+                                    <div className="card-body">
                                         <div class="container">
                                             <div class="row">
-                                                <div class="col-md-3">
-                                                    <div class="card p-3 text-right">
-                                                        <h5 class="card-title">Card title</h5>
-                                                        <p class="card-text">This is another card with title and supporting text below. </p>
+                                                <div class="col">
+                                                    <div className="otherinfo">
+                                                        <div className="well profile">
+                                                            <div className="userimage"><i className="far fa-user-circle"></i></div>
+
+                                                        </div>
 
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="card p-3 text-right">
-                                                        <h5 class="card-title">Card title</h5>
-                                                        <p class="card-text">This is another card with title and supporting text below. </p>
+                                                <div class="col">
+                                                    <div className="otherinfo">
+                                                        <div className="well profile">
+                                                            <div className="userimage"><i className="far fa-user-circle"></i></div>
+
+                                                        </div>
 
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="card p-3 text-right">
-                                                        <h5 class="card-title">Card title</h5>
-                                                        <p class="card-text">This is another card with title and supporting text below. </p>
 
+
+                                                <div class="w-100">
+
+                                                </div>
+                                                <div class="col">
+                                                    <div className="otherinfo">
+                                                        <div className="well profile">
+                                                            <div className="userimage"><i className="far fa-user-circle"></i></div>
+
+
+                                                        </div>
                                                     </div>
                                                 </div>
-                                                <div class="col-md-3">
-                                                    <div class="card p-3 text-right">
-                                                        <h5 class="card-title">Card title</h5>
-                                                        <p class="card-text">This is another card with title and supporting text below. </p>
+                                                <div class="col">
+                                                    <div className="otherinfo">
+                                                        <div className="well profile">
+                                                            <div className="userimage"><i className="far fa-user-circle"></i></div>
 
+
+                                                        </div>
                                                     </div>
                                                 </div>
+
+
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div className="otherinfo">
+                                                        <div className="well profile">
+                                                            <div className="userimage"><i className="far fa-user-circle"></i></div>
 
-                                <div class="container">
-                                    <div class="col-md-15">
-                                        <div class="card">
-                                            <h5 class="card-header main-color-bg">Active</h5>
-                                            <table class="table table-hover">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">#</th>
-                                                        <th scope="col">First</th>
-                                                        <th scope="col">Last</th>
-                                                        <th scope="col">Handle</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row">1</th>
-                                                        <td>Mark</td>
-                                                        <td>Otto</td>
-                                                        <td>@mdo</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2</th>
-                                                        <td>Jacob</td>
-                                                        <td>Thornton</td>
-                                                        <td>@fat</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">3</th>
-                                                        <td colspan="2">Larry the Bird</td>
-                                                        <td>@twitter</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div className="otherinfo">
+                                                        <div className="well profile">
+                                                            <div className="userimage"><i className="far fa-user-circle"></i></div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="w-100">
+
+                                                </div>
+                                                <div class="col">
+                                                    <div className="otherinfo">
+                                                        <div className="well profile">
+                                                            <div className="userimage"><i className="far fa-user-circle"></i></div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div className="otherinfo">
+                                                        <div className="well profile">
+                                                            <div className="userimage"><i className="far fa-user-circle"></i></div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
+                                        </div>
+                                        <div class="container">
+                                            <div class="row">
+                                                <div class="col">
+                                                    <div className="otherinfo">
+                                                        <div className="well profile">
+                                                            <div className="userimage"><i className="far fa-user-circle"></i></div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div className="otherinfo">
+                                                        <div className="well profile">
+                                                            <div className="userimage"><i className="far fa-user-circle"></i></div>
+
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+
+
+                                                <div class="w-100">
+
+                                                </div>
+                                                <div class="col">
+                                                    <div className="otherinfo">
+                                                        <div className="well profile">
+                                                            <div className="userimage"><i className="far fa-user-circle"></i></div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col">
+                                                    <div className="otherinfo">
+                                                        <div className="well profile">
+                                                            <div className="userimage"><i className="far fa-user-circle"></i></div>
+
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -182,7 +254,7 @@ class ViewTollCollector extends Component {
 
                 </section>
                 <footer id="footer">
-                    <p>Copyright MMDA, &copy; 2019</p>
+                    <p style={{ color: 'white' }}>Copyright MMDA, &copy; 2019</p>
                 </footer>
 
 

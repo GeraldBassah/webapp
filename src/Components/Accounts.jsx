@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import "./Accounts.css";
+import BarChart from "./BarChart.jsx";
 
 class Accounts extends Component {
 
@@ -50,7 +51,7 @@ class Accounts extends Component {
                     <div className="container">
                         <div className="row">
                             <div className="col-md-10">
-                                <h2><i className="far fa-money-bill-alt"></i> Accounts <small>Manage Your Accounts </small></h2>
+                                <h2 style={{ color: 'white' }}><i className="fas fa-money-bill-alt"></i> Accounts <small>Manage Your Accounts </small></h2>
                             </div>
                         </div>
                     </div>
@@ -69,12 +70,12 @@ class Accounts extends Component {
                 <section id="main">
                     <div className="container">
                         <div className="row">
-                            <div className="col-3">
+                            <div className="col-md-3">
                                 <div className="list-group">
                                     <a href="/revdashboard" className="list-group-item list-group-item-action ">
                                         <i className="fas fa-tachometer-alt"></i> Dashboard
   </a>
-                                    <a href="/rev/Accounts" className="list-group-item list-group-item-action active main-color-bg"><i className="far fa-money-bill-alt"></i> Accounts</a>
+                                    <a href="/rev/Accounts" className="list-group-item list-group-item-action active main-color-bg" style={{ border: 'none' }}><i className="fas fa-money-bill-alt"></i> Accounts</a>
 
                                     <div className="dropdown">
                                         <a href="#" className="list-group-item list-group-item-action dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -101,79 +102,100 @@ class Accounts extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-9">
+                            <div className="col-md-9">
                                 <div className="card ">
-                                    <h5 className="card-header main-color-bg">Featured</h5>
+                                    <h5 className="card-header main-color-bg" style={{ border: 'none' }}>Accounts</h5>
                                     <div className="card-body">
                                         <div className="container">
                                             <div className="row">
-                                                <div className="col-3">
-                                                    <div className="card p-3 text-right">
-                                                        <h5 className="card-title">Card title</h5>
-                                                        <p className="card-text">This is another card with title and supporting text below. </p>
 
-                                                    </div>
-                                                </div>
-                                                <div className="col-3">
-                                                    <div className="card p-3 text-right">
-                                                        <h5 className="card-title">Card title</h5>
-                                                        <p className="card-text">This is another card with title and supporting text below. </p>
+                                                <table className="table table-hover table-sm">
+                                                    <tr>
+                                                        <th>Title</th>
+                                                        <th>Published</th>
+                                                        <th>Created</th>
+                                                        <th></th>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Home</td>
+                                                        <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+                                                        <td>Dec 12, 2016</td>
+                                                        <td>
+                                                            <a class="btn btn-danger" href="edit.html">
+                                                                <span className="d-none d-md-flex"> Edit</span>
+                                                                <span className="d-block d-sm-none"><i className="fas fa-icon-pencil"></i></span>
+                                                            </a>
 
-                                                    </div>
-                                                </div>
-                                                <div className="col-3">
-                                                    <div className="card p-3 text-right">
-                                                        <h5 className="card-title">Card title</h5>
-                                                        <p className="card-text">This is another card with title and supporting text below. </p>
+                                                            <a class="btn btn-secondary" href="#">
+                                                                <span className="d-none d-md-flex"> Delete</span>
+                                                                <span className="d-block d-sm-none"><i className="fas fa-times"></i></span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>About</td>
+                                                        <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+                                                        <td>Dec 13, 2016</td>
+                                                        <td>
+                                                            <a class="btn btn-danger" href="#">
+                                                                <span className="d-none d-md-flex"> Edit</span>
+                                                                <span className="d-block d-sm-none"><i className="fas fa-icon-pencil"></i></span>
+                                                            </a>
 
-                                                    </div>
-                                                </div>
-                                                <div className="col-3">
-                                                    <div className="card p-3 text-right">
-                                                        <h5 className="card-title">Card title</h5>
-                                                        <p className="card-text">This is another card with title and supporting text below. </p>
+                                                            <a class="btn btn-secondary" href="#">
+                                                                <span className="d-none d-md-flex"> Delete</span>
+                                                                <span className="d-block d-sm-none"><i className="fas fa-times"></i></span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Services</td>
+                                                        <td><span class="glyphicon glyphicon-remove" aria-hidden="true"></span></td>
+                                                        <td>Dec 13, 2016</td>
+                                                        <td>
+                                                            <a class="btn btn-danger" href="#">
+                                                                <span className="d-none d-md-flex"> Edit</span>
+                                                                <span className="d-block d-sm-none"><i className="fas fa-icon-pencil"></i></span>
+                                                            </a>
 
-                                                    </div>
-                                                </div>
+                                                            <a class="btn btn-secondary" href="#">
+                                                                <span className="d-none d-md-flex"> Delete</span>
+                                                                <span className="d-block d-sm-none"><i className="fas fa-times"></i></span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Contact</td>
+                                                        <td><span class="glyphicon glyphicon-ok" aria-hidden="true"></span></td>
+                                                        <td>Dec 14, 2016</td>
+                                                        <td>
+                                                            <a class="btn btn-danger" href="#">
+                                                                <span className="d-none d-md-flex"> Edit</span>
+                                                                <span className="d-block d-sm-none"><i className="fas fa-icon-icon-pencil"></i></span>
+                                                            </a>
+
+                                                            <a class="btn btn-secondary" href="#">
+                                                                <span className="d-none d-md-flex"> Delete</span>
+                                                                <span className="d-block d-sm-none"><i className="fas fa-times"></i></span>
+                                                            </a>
+                                                        </td>
+                                                    </tr>
+                                                </table>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
 
-                                <div className="container">
-                                    <div className="col-15">
-                                        <div className="card">
-                                            <h5 className="card-header main-color-bg">Active</h5>
-                                            <table className="table table-hover">
-                                                <thead>
-                                                    <tr>
-                                                        <th scope="col">#</th>
-                                                        <th scope="col">First</th>
-                                                        <th scope="col">Last</th>
-                                                        <th scope="col">Handle</th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <th scope="row">1</th>
-                                                        <td>Mark</td>
-                                                        <td>Otto</td>
-                                                        <td>@mdo</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">2</th>
-                                                        <td>Jacob</td>
-                                                        <td>Thornton</td>
-                                                        <td>@fat</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <th scope="row">3</th>
-                                                        <td colspan="2">Larry the Bird</td>
-                                                        <td>@twitter</td>
-                                                    </tr>
-                                                </tbody>
-                                            </table>
+                                <div className="mt-2">
+                                    <div className="card">
+
+                                        <h5 className="card-header main-color-bg" style={{ border: 'none' }}>Toll Distribution</h5>
+                                        <div className="card-body">
+                                            <div className="col-md-9">
+                                                <BarChart />
+                                            </div>
                                         </div>
+
                                     </div>
                                 </div>
                             </div>
@@ -183,7 +205,7 @@ class Accounts extends Component {
 
                 </section>
                 <footer id="footer">
-                    <p>Copyright MMDA, &copy; 2019</p>
+                    <p style={{ color: 'white' }}>Copyright MMDA, &copy; 2019</p>
                 </footer>
 
 

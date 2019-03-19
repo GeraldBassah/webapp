@@ -8,6 +8,7 @@ import third from "../img/third.jpg";
 import second from "../img/second.jpg";
 import first from "../img/first.jpg";
 import Features from "./features.jsx";
+import { AutoComplete } from "antd";
 
 
 //import  RevLogin  from "./Components/RevLogin";
@@ -17,7 +18,7 @@ class Firstpage extends Component {
 
   render() {
     return (
-      <div>
+      <div id="Firstpage">
 
         <nav className="navbar fixed-top navbar-expand-lg navbar navbar-dark bg-dark">
           <a className="navbar-brand" href="/"><Link to="Home" smooth={true} >MMDA Suite</Link></a>
@@ -38,7 +39,6 @@ class Firstpage extends Component {
             </ul>
           </div>
         </nav>
-
         <div id="mycarousel">
           <div id="carouselExampleSlidesOnly" className="carousel slide" data-ride="carousel">
             <div className="carousel-inner">
@@ -61,28 +61,30 @@ class Firstpage extends Component {
           </div>
 
         </div>
-        <Grid >
-          <div id="mybuttons">
+        <Grid className="revsecbuttons col-md-2 col-sm-6 col-xs-12" style={{}}>
 
-            <Button bsStyle="primary" bsSize="large" block onClick={this.onPageChange}
-              name="/revlogin" >
-              Revenue Head
+          <Button className="btn btn-primary btn-block" bsStyle="primary" bsSize="large" block onClick={this.onPageChange}
+            name="/revlogin" >
+            Revenue Head
                </Button>
 
 
-            <Button bsSize="large" bsStyle="primary" block onClick={this.onPageChange} name="/seclogin">
-              Sectional Head
+          <Button className="btn btn-primary btn-block" bsSize="large" bsStyle="primary" block onClick={this.onPageChange} name="/seclogin">
+            Sectional Head
                </Button>
-          </div>
+
 
         </Grid>
-        <div>
+        <div id="Features">
           <Features />
         </div>
+        <footer id="footer">
+          <p style={{ color: 'white' }}>Copyright MMDA, &copy; 2019</p>
+        </footer>
 
 
 
-      </div>
+      </div >
 
     );
   }

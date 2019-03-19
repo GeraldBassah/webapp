@@ -1,12 +1,11 @@
 import React, { Component } from "react";
-import { Link } from 'react-router-dom'
-import Routes from './Routes';
-
-//import DashBoard from "./Components/DashBoard.jsx";
+import "./Accounts.jsx";
+import { Navbar, Nav } from 'react-bootstrap';
 
 
 
-class SecDashboardView extends Component {
+
+class SecdashboardView extends Component {
     render() {
         return (
             <div>
@@ -23,19 +22,10 @@ class SecDashboardView extends Component {
                             <li className="nav-item">
                                 <a className="nav-link" href="/rev/Accounts">Accounts</a>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Section
-                            </a>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a className="dropdown-item" href="/rev/viewsectionalheads">View Sectional Heads</a>
 
-
-                                </div>
-                            </li>
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Collectors
+                                    Section Collectors
                           </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                     <a className="dropdown-item" href="/rev/viewtollcollectors">View Toll Collectors</a>
@@ -45,7 +35,16 @@ class SecDashboardView extends Component {
                             </li>
                         </ul>
 
+                        <ul className="navbar-nav ml-auto">
+                            <li className="nav-item">
+                                <a className="nav-link" style={{ color: 'white' }}><i className="fas fa-user-circle"> Welcome, Gerald</i></a>
+                            </li>
 
+                            <li className="nav-item active">
+                                <a className="nav-link" href="#">Logout</a>
+                            </li>
+
+                        </ul>
 
                     </div>
                 </nav>
@@ -72,26 +71,16 @@ class SecDashboardView extends Component {
                 <section id="main">
                     <div className="container">
                         <div className="row">
-                            <div className="col-3">
+                            <div className="col-md-3">
                                 <div className="list-group">
                                     <a href="/revdashboard" className="list-group-item list-group-item-action active main-color-bg">
                                         <i className="fas fa-tachometer-alt"></i> Dashboard
   </a>
                                     <a href="/rev/Accounts" className="list-group-item list-group-item-action"><i className="far fa-money-bill-alt"></i> Accounts</a>
 
-                                    <div className="dropdown">
-                                        <a href="#" className="list-group-item list-group-item-action dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i className="fas fa-star-of-life"></i> Section
-                </a>
-                                        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a className="dropdown-item" href="/rev/viewsectionalheads">View Sectional Heads</a>
-                                            <div className="dropdown-divider"></div>
-                                            <a className="dropdown-item" href="/rev/addsectionalheads">Add Sectional Heads</a>
 
-                                        </div>
-                                    </div>
                                     <div className="dropdown">
-                                        <a href="#" className="list-group-item list-group-item-action dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-walking"></i> Collectors</a>
+                                        <a href="#" className="list-group-item list-group-item-action dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-walking"></i>Section Collectors</a>
                                         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
                                             <a className="dropdown-item" href="/rev/viewtollcollectors">View Toll Collectors</a>
                                             <div className="dropdown-divider"></div>
@@ -104,34 +93,34 @@ class SecDashboardView extends Component {
                                     </div>
                                 </div>
                             </div>
-                            <div className="col-9">
+                            <div className="col-md-9">
                                 <div className="card ">
                                     <h5 className="card-header main-color-bg">Featured</h5>
                                     <div className="card-body">
                                         <div className="container">
                                             <div className="row">
-                                                <div className="col-3">
+                                                <div className="col-md-3">
                                                     <div className="card p-3 text-right">
                                                         <h5 className="card-title">Card title</h5>
                                                         <p className="card-text">This is another card with title and supporting text below. </p>
 
                                                     </div>
                                                 </div>
-                                                <div className="col-3">
+                                                <div className="col-md-3">
                                                     <div className="card p-3 text-right">
                                                         <h5 className="card-title">Card title</h5>
                                                         <p className="card-text">This is another card with title and supporting text below. </p>
 
                                                     </div>
                                                 </div>
-                                                <div className="col-3">
+                                                <div className="col-md-3">
                                                     <div className="card p-3 text-right">
                                                         <h5 className="card-title">Card title</h5>
                                                         <p className="card-text">This is another card with title and supporting text below. </p>
 
                                                     </div>
                                                 </div>
-                                                <div className="col-3">
+                                                <div className="col-md-3">
                                                     <div className="card p-3 text-right">
                                                         <h5 className="card-title">Card title</h5>
                                                         <p className="card-text">This is another card with title and supporting text below. </p>
@@ -144,7 +133,7 @@ class SecDashboardView extends Component {
                                 </div>
 
                                 <div className="container">
-                                    <div className="col-15">
+                                    <div className="col-md-15">
                                         <div className="card">
                                             <h5 className="card-header main-color-bg">Active</h5>
                                             <table className="table table-hover">
@@ -200,8 +189,11 @@ class SecDashboardView extends Component {
 
 
 
+
+
         );
     }
 }
 
-export default SecDashboardView;
+export default SecdashboardView;
+

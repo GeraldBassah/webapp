@@ -1,12 +1,22 @@
 body{
-    background:#f4f4f4;
+  background: #ADA996;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to left, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   }
+
+
+  
   
   /* Navbar */
   .navbar{
     min-height: 33px !important;
     margin-bottom:0;
     border-radius:0;
+  }
+  a.navbar-brand{
+  margin-top: auto;
+    text-align: center;
   }
   
   .navbar-nav > li > a, .navbar-brand{
@@ -16,15 +26,26 @@ body{
   }
   
   .navbar {
-    background-color: #333333;
-    border-color: #333333;
+    background: #dd1818!important;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd1818, #dd1818)!important;  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dd1818, #dd1818)!important; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+  }
+
+
+  #Firstpage .navbar {
+    background:#343a40!important;
   }
   .navbar-expand-lg .navbar-brand {
     color: #ecf0f1;
   }
   .navbar .navbar-brand:hover,
   .navbar .navbar-brand:focus {
-    color: #333333;
+    color: #dd1818;
+    background: #dd1818;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd1818, #dd1818);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dd1818, #dd1818); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
   }
   .navbar .navbar-text {
     color: #ecf0f1;
@@ -34,26 +55,30 @@ body{
   }
   .navba .navbar-nav > li > a:hover,
   .navbar .navbar-nav > li > a:focus {
-    color: #333333;
+    color: #dd1818;
+    background: #dd1818;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd1818, #dd1818);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dd1818, #dd1818); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
   }
   .navbar.navbar-nav > .active > a,
   .navbar .navbar-nav > .active > a:hover,
   .navbar .navbar-nav > .active > a:focus {
-    color: #333333;
-    background-color: #333333;
+    color: #dd1818;
+    background: #ed213a;
   }
   .navbar .navbar-nav > .open > a,
   .navbar .navbar-nav > .open > a:hover,
   .navbar.navbar-nav > .open > a:focus {
     color:#ecf0f1;
-    background-color: #333333;
+    background: #dd1818;
   }
   .navbar.navbar-toggle {
-    border-color: #333333;
+    border: #dd1818;
   }
   .navbar.navbar-toggle:hover,
   .navbar .navbar-toggle:focus {
-    background-color: black;
+    background: #dd1818;
   }
   .navbar .navbar-toggle .icon-bar {
     background-color: #ecf0f1;
@@ -71,17 +96,18 @@ body{
   
   /* Custom */
   .main-color-bg{
-    background-color: #333333 !important;
-    border-color:#333333 !important;
-    color:#ffffff !important;
+    background-color: #dd1818;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #dd1818, #dd1818);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #dd1818, #dd1818); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
   }
   
   /* Header */
   #header{
-    background:#cccccc;
-    color:black;
-    padding-bottom: 10px;
-    margin-bottom: 15px;
+    background:#333333;
+  color:#ffffff;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
   }
   
   #header .create{
@@ -121,20 +147,77 @@ body{
     margin-top:30px;
   }
   
-  
+  .portfolio {
+    list-style: none;
+}
+
+
   @media (max-width: 767px) {
     .navbar .navbar-nav .open .dropdown-menu > li > a {
       color: #ecf0f1;
     }
     .navbar .navbar-nav .open .dropdown-menu > li > a:hover,
     .navbar .navbar-nav .open .dropdown-menu > li > a:focus {
-      color: #333333;
+      color: #dd1818;
     }
     .navbar .navbar-nav .open .dropdown-menu > .active > a,
     .navbar .navbar-nav .open .dropdown-menu > .active > a:hover,
     .navbar .navbar-nav .open .dropdown-menu > .active > a:focus {
-      color: #333333;
-      background-color: #333333 ;
+      color: #dd1818;
+      background: #dd1818 ;
     }
   }
-  
+  #breadcrumb .container{
+      padding-top:0;
+      padding-bottom:0;
+  }
+  .Stats .row .col-md-3 {
+    padding-top: 10px;
+}
+
+.Stats .row h2{
+    margin-bottom: 0;
+    font-size: 1.8rem;
+}
+
+.Stats .row p {
+    text-align: center;
+    margin-bottom: 0;
+    font-size: 18px;
+}
+
+.graphs .col-md-3 {
+    padding:0;
+}
+
+.progress-bar {
+    background-color: #333;
+    color: #fff;
+}
+
+.seventy{
+    width: 70%!important;
+}
+
+.forty{
+    width: 45%!important;
+}
+
+.progress {
+    margin-bottom: 10px;
+}
+
+
+.well {
+    padding:0.8rem;
+    margin-left: auto!important;
+    margin-right: auto!important;
+    width: 95%;
+    border: 1px solid silver;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    background-color: white;
+    box-shadow:0 4px 8px 0 rgba(0,0,0,0.2) , 0 6px 20px 0 rgba(0,0,0,0.019);
+}
+ 

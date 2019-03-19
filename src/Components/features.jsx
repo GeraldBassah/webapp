@@ -5,8 +5,8 @@ class Features extends React.Component {
     render() {
         return (
             <div>
-                <section id="Services">
-                    <div id="about">
+                <section id="Services" style={{ marginTop: '-10%' }}>
+                    <div id="about" >
                         <div className="container">
                             <div className="row">
 
@@ -29,32 +29,32 @@ class Features extends React.Component {
                                 <div className="icon">
                                     <i class="fas fa-walking"></i>
                                 </div>
-                                <h3>Track Collectors</h3>
-                                <p>Lorem ipsum dolor amet. In taberna in discussurum. Quantus tremor est futurus, dies irae dies illa.</p>
+                                <h3 style={{ color: 'white' }}>Track Collectors</h3>
+
                             </div>
 
                             <div className="col-md-3 text-center">
                                 <div className="icon">
-                                    <i class="far fa-money-bill-alt"></i>
+                                    <i class="fas fa-money-bill-alt"></i>
                                 </div>
-                                <h3>Accounting Information</h3>
-                                <p>Lorem ipsum dolor amet. In taberna in discussurum. Quantus tremor est futurus, dies irae dies illa.</p>
+                                <h3 style={{ color: 'white' }}>Accounting Information</h3>
+
                             </div>
 
                             <div className="col-md-3 text-center">
                                 <div className="icon">
                                     <i class="fas fa-plus"></i>
                                 </div>
-                                <h3>Add Collectors</h3>
-                                <p>Lorem ipsum dolor amet. In taberna in discussurum. Quantus tremor est futurus, dies irae dies illa.</p>
+                                <h3 style={{ color: 'white' }}>Add Collectors</h3>
+
                             </div>
 
                             <div className="col-md-3 text-center">
                                 <div className="icon">
                                     <i class="fas fa-plus-square"></i>
                                 </div>
-                                <h3>Add Sectional Heads</h3>
-                                <p>Lorem ipsum dolor amet. In taberna in discussurum. Quantus tremor est futurus, dies irae dies illa.</p>
+                                <h3 style={{ color: 'white' }}>Add Sectional Heads</h3>
+
                             </div>
                         </div>
                     </div>

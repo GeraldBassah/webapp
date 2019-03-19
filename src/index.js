@@ -3,9 +3,9 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App.js";
 import * as serviceWorker from "./serviceWorker";
-import  "bootstrap/dist/css/bootstrap.css";
-import "react-mdl/extra/material.css";
-import "react-mdl/extra/material.js";
+import "bootstrap/dist/css/bootstrap.css";
+import "antd/dist/antd.css";
+import "./index.css";
 
 //import registerServiceWorker from "./registerServiceWorker";
 ReactDOM.render(
