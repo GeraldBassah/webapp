@@ -1,163 +1,206 @@
-import React, { Component } from "react";
-import "./Collector.css";
-import { Button } from "react-bootstrap";
+import React from 'react';
+import { Form, Input, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import './RevSignup.css';
+import 'antd/dist/antd.css';
 
-const emailRegex = RegExp(
-  /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
-);
+const { Option } = Select;
+const AutoCompleteOption = AutoComplete.Option;
 
-const formValid = ({ formErrors, ...rest }) => {
-  let valid = true;
 
-  Object.values(formErrors).forEach(val => {
-    val.length > 0 && (valid = false);
-  });
-  Object.values(rest).forEach(val => {
-    val == null && (valid = false);
-  });
+class Collector extends React.Component {
+  state = {
+    confirmDirty: false,
+    autoCompleteResult: [],
+  };
 
-  return valid;
-};
-
-class Collector extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      firstName: null,
-      lastName: null,
-      email: null,
-      password: null,
-      formErrors: {
-        firstName: "",
-        lastName: "",
-        email: "",
-        password: ""
+  handleSubmit = (e) => {
+    e.preventDefault();
+    this.props.form.validateFieldsAndScroll((err, values) => {
+      if (!err) {
+        console.log('Received values of form: ', values);
       }
-    };
+    });
   }
 
-  handleSubmit = e => {
-    e.preventDefault();
+  handleConfirmBlur = (e) => {
+    const value = e.target.value;
+    this.setState({ confirmDirty: this.state.confirmDirty || !!value });
+  }
 
-    if (formValid(this.state)) {
-      console.log(`
-            --SUBMITTING--
-            First Name:${this.state.firstName}
-            Last Name:${this.state.lastName}
-            Email:${this.state.email}
-           Password:${this.state.password}
-
-            `);
+  compareToFirstPassword = (rule, value, callback) => {
+    const form = this.props.form;
+    if (value && value !== form.getFieldValue('password')) {
+      callback('Two passwords that you enter is inconsistent!');
     } else {
-      console.error("FORM INVALID -DISPLAY ERROR MESSAGE");
+      callback();
     }
-  };
-  handleChange = e => {
-    e.preventDefault();
-    const { name, value } = e.target;
-    let formErrors = this.state.formErrors;
+  }
 
-    switch (name) {
-      case "firstName":
-        formErrors.firstName =
-          value.length < 3 && value.length > 0
-            ? "minimum 3 characters required"
-            : "";
-        break;
-      case "lastName":
-        formErrors.lastName =
-          value.length < 3 && value.length > 0
-            ? "minimum 3 characters required"
-            : "";
-        break;
-      case "email":
-        formErrors.email =
-          emailRegex.test(value) && value.length > 0
-            ? ""
-            : "invalid email address";
-        break;
-      case "password":
-        formErrors.password =
-          value.length < 6 && value.length > 0
-            ? "minimum  6 characters required"
-            : "";
-        break;
-      default:
-        break;
+  validateToNextPassword = (rule, value, callback) => {
+    const form = this.props.form;
+    if (value && this.state.confirmDirty) {
+      form.validateFields(['confirm'], { force: true });
     }
-    this.setState({ formErrors, [name]: value }, () => console.log(this.state));
-  };
+    callback();
+  }
+
+  handleWebsiteChange = (value) => {
+    let autoCompleteResult;
+    if (!value) {
+      autoCompleteResult = [];
+    } else {
+      autoCompleteResult = ['.com', '.org', '.net'].map(domain => `${value}${domain}`);
+    }
+    this.setState({ autoCompleteResult });
+  }
 
   render() {
-    const { formErrors } = this.state;
+    const { getFieldDecorator } = this.props.form;
+    const { autoCompleteResult } = this.state;
+
+    const formItemLayout = {
+      labelCol: {
+        xs: { span: 24 },
+        sm: { span: 8 },
+      },
+      wrapperCol: {
+        xs: { span: 24 },
+        sm: { span: 16 },
+      },
+    };
+    const tailFormItemLayout = {
+      wrapperCol: {
+        xs: {
+          span: 24,
+          offset: 0,
+        },
+        sm: {
+          span: 16,
+          offset: 8,
+        },
+      },
+    };
+    const prefixSelector = getFieldDecorator('prefix', {
+      initialValue: '233',
+    })(
+      <Select style={{ width: 80 }}>
+        <Option value="233">+233</Option>
+        <Option value="234">+234</Option>
+      </Select>
+      );
+
+    const websiteOptions = autoCompleteResult.map(website => (
+      <AutoCompleteOption key={website}>{website}</AutoCompleteOption>
+    ));
+
     return (
-      <div className="wrapper">
-        <div className="form-wrapper">
-          <h1>Create Account For Toll Collector</h1>
-          <form onSubmit={this.handleSubmit} noValidate>
-            <div className="firstName">
-              <label htmlFor="firstName">First Name</label>
-              <input
-                className={formErrors.firstName.length > 0 ? "error" : null}
-                placeholder="First Name"
-                type="text"
-                name="firstName"
-                noValidate
-                onChange={this.handleChange}
-              />
-              {formErrors.firstName.length > 0 && (
-                <span className="errorMessage">{formErrors.firstName}</span>
-              )}
+      <div>
+        <nav className="navbar fixed-top navbar-expand-lg navbar navbar-dark bg-dark">
+          <a className="navbar-brand" href="/">MMDA Suite</a>
+        </nav>
+        <div id="Registerpage">
+          <div className="RegisterDiv">
+            <div className="innerdiv">
+
+              <Form onSubmit={this.handleSubmit}>
+
+
+                <div className="formwrapper" style={{ marginLeft: '18%', marginTop: '20%' }}>
+                  <h1 style={{ paddingTop: '0%', textAlign: 'center' }}>ADD TOLL COLLECTOR</h1>
+                  <Form.Item
+                    {...formItemLayout}
+                    label="E-mail"
+                  >
+                    {getFieldDecorator('email', {
+                      rules: [{
+                        type: 'email', message: 'The input is not valid E-mail!',
+                      }, {
+                        required: true, message: 'Please input your E-mail!',
+                      }],
+                    })(
+                      <Input />
+                      )}
+                  </Form.Item>
+                  <Form.Item
+                    {...formItemLayout}
+                    label="Password"
+                  >
+                    {getFieldDecorator('password', {
+                      rules: [{
+                        required: true, message: 'Please input your password!',
+                      }, {
+                        validator: this.validateToNextPassword,
+                      }],
+                    })(
+                      <Input type="password" />
+                      )}
+                  </Form.Item>
+                  <Form.Item
+                    {...formItemLayout}
+                    label="Confirm Password"
+                  >
+                    {getFieldDecorator('confirm', {
+                      rules: [{
+                        required: true, message: 'Please confirm your password!',
+                      }, {
+                        validator: this.compareToFirstPassword,
+                      }],
+                    })(
+                      <Input type="password" onBlur={this.handleConfirmBlur} />
+                      )}
+                  </Form.Item>
+
+
+                  <Form.Item
+                    {...formItemLayout}
+                    label="Phone Number"
+                  >
+                    {getFieldDecorator('phone', {
+                      rules: [{ required: true, message: 'Please input your phone number!' }],
+                    })(
+                      <Input addonBefore={prefixSelector} style={{ width: '100%' }} />
+                      )}
+                  </Form.Item>
+
+                  <Form.Item
+                    {...formItemLayout}
+                    label="Captcha"
+                    extra="We must make sure that your are a human."
+                  >
+                    <Row gutter={8}>
+                      <Col span={12}>
+                        {getFieldDecorator('captcha', {
+                          rules: [{ required: true, message: 'Please input the captcha you got!' }],
+                        })(
+                          <Input />
+                          )}
+                      </Col>
+                      <Col span={12}>
+                        <Button>Get captcha</Button>
+                      </Col>
+                    </Row>
+                  </Form.Item>
+                  <Form.Item {...tailFormItemLayout}>
+                    {getFieldDecorator('agreement', {
+                      valuePropName: 'checked',
+                    })(
+                      <Checkbox>I have read the <a href="">agreement</a></Checkbox>
+                      )}
+                  </Form.Item>
+                  <Form.Item {...tailFormItemLayout}>
+                    <Button type="primary" htmlType="submit" href="/login">Register</Button>
+                  </Form.Item>
+                </div>
+              </Form>
             </div>
-            <div className="lastName">
-              <label htmlFor="lastName">Last Name</label>
-              <input
-                className={formErrors.lastName.length > 0 ? "error" : null}
-                placeholder="Last Name"
-                type="text"
-                name="lastName"
-                noValidate
-                onChange={this.handleChange}
-              />
-              {formErrors.lastName.length > 0 && (
-                <span className="errorMessage">{formErrors.lastName}</span>
-              )}
-            </div>
-            <div className="email">
-              <label htmlFor="email">Email</label>
-              <input
-                className={formErrors.email.length > 0 ? "error" : null}
-                placeholder="Email"
-                type="email"
-                name="email"
-                noValidate
-                onChange={this.handleChange}
-              />
-              {formErrors.email.length > 0 && (
-                <span className="errorMessage">{formErrors.email}</span>
-              )}
-            </div>
-            <div className="password">
-              <label htmlFor="password">Password</label>
-              <input
-                className={formErrors.password.length > 0 ? "error" : null}
-                placeholder="Password"
-                type="password"
-                name="password"
-                noValidate
-                onChange={this.handleChange}
-              />
-              {formErrors.password.length > 0 && (
-                <span className="errorMessage">{formErrors.password}</span>
-              )}
-            </div>
-            <div className="createAccount">
-              <Button type="submit">Create Account</Button>
-            </div>
-          </form>
+          </div>
         </div>
       </div>
+
     );
   }
 }
-export default Collector;
+
+
+
+export default Form.create()(Collector);

@@ -106,7 +106,7 @@ class RevSignup extends React.Component {
 
 
                                 <div className="formwrapper" style={{ marginLeft: '18%', marginTop: '20%' }}>
-                                    <h1 style={{ paddingTop: '0%' }}>ADD SECTIONAL HEAD</h1>
+                                    <h1 style={{ paddingTop: '0%', textAlign: 'center' }}>ADD SECTIONAL HEAD</h1>
                                     <Form.Item
                                         {...formItemLayout}
                                         label="E-mail"

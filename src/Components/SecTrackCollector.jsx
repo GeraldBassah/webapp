@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Map, InfoWindow, Marker, GoogleApiWrapper } from 'google-maps-react';
 
-class ActiveCollectors extends Component {
+class SecTrackCollector extends Component {
     render() {
         return (
             <div>
@@ -25,4 +25,4 @@ class ActiveCollectors extends Component {
 export default GoogleApiWrapper({
     apiKey:
     (' AIzaSyA1qmMz4D7YKCJ2BsPtaLuTVGqA_M3Vf6M')
-})(ActiveCollectors)
+})(SecTrackCollector)

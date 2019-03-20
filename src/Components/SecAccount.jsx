@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./Accounts.css";
 import BarChart from "./BarChart.jsx";
 
-class Accounts extends Component {
+class SecAccount extends Component {
 
     render() {
 
@@ -16,34 +16,36 @@ class Accounts extends Component {
                     <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav">
                             <li className="nav-item ">
-                                <a className="nav-link" href="/revdashboard">Dashboard </a>
+                                <a className="nav-link" href="/secdashboard">Dashboard </a>
                             </li>
                             <li className="nav-item active">
-                                <a className="nav-link" href="/rev/Accounts">Accounts<span className="sr-only">(current)</span></a>
+                                <a className="nav-link" href="/secAccount">Accounts<span className="sr-only">(current)</span></a>
                             </li>
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Section
-                            </a>
-                                <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a className="dropdown-item" href="/rev/viewsectionalheads">View Sectional Heads</a>
-                                    <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="/rev/addsectionalheads">Add Sectional Heads</a>
-                                </div>
-                            </li>
+
                             <li className="nav-item dropdown">
                                 <a className="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Collectors
-                          </a>
+                                    Section Collectors
+                      </a>
                                 <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                    <a className="dropdown-item" href="/rev/viewtollcollectors">View Toll Collectors</a>
+                                    <a className="dropdown-item" href="/secViewCollector">View Toll Collectors</a>
                                     <div className="dropdown-divider"></div>
-                                    <a className="dropdown-item" href="/rev/tracktollcollectors">Track Toll Collectors</a>
+                                    <a className="dropdown-item" href="/sectrackCollectors">Track Toll Collectors</a>
+                                    <div className="dropdown-divider"></div>
+                                    <a className="dropdown-item" href="/secAddCollector">Add Toll Collectors</a>
                                 </div>
                             </li>
                         </ul>
 
+                        <ul className="navbar-nav ml-auto">
+                            <li className="nav-item">
+                                <a className="nav-link" style={{ color: 'white' }}><i className="fas fa-user-circle"> Welcome,SecHead</i></a>
+                            </li>
 
+                            <li className="nav-item active">
+                                <a className="nav-link" href="/seclogin">Logout</a>
+                            </li>
+
+                        </ul>
 
                     </div>
                 </nav>
@@ -72,28 +74,21 @@ class Accounts extends Component {
                         <div className="row">
                             <div className="col-md-3">
                                 <div className="list-group">
-                                    <a href="/revdashboard" className="list-group-item list-group-item-action ">
+                                    <a href="/secdashboard" className="list-group-item list-group-item-action ">
                                         <i className="fas fa-tachometer-alt"></i> Dashboard
   </a>
-                                    <a href="/rev/Accounts" className="list-group-item list-group-item-action active main-color-bg" style={{ border: 'none' }}><i className="fas fa-money-bill-alt"></i> Accounts</a>
+                                    <a href="/secAccount" className="list-group-item list-group-item-action active main-color-bg" style={{ border: 'none' }}><i className="fas fa-money-bill-alt"></i> Accounts</a>
+
 
                                     <div className="dropdown">
-                                        <a href="#" className="list-group-item list-group-item-action dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i className="fas fa-star-of-life"></i> Section
-                </a>
+                                        <a href="#" className="list-group-item list-group-item-action dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-walking"></i> Section Collectors</a>
                                         <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a className="dropdown-item" href="/rev/viewsectionalheads">View Sectional Heads</a>
+                                            <a className="dropdown-item" href="/SecViewCollector">View Toll Collectors</a>
                                             <div className="dropdown-divider"></div>
-                                            <a className="dropdown-item" href="/rev/addsectionalheads">Add Sectional Heads</a>
+                                            <a className="dropdown-item" href="/SecTrackCollector">Track Toll Collectors</a>
+                                            <div className="dropdown-divider"></div>
+                                            <a className="dropdown-item" href="/secAddCollector">Add Toll Collectors</a>
 
-                                        </div>
-                                    </div>
-                                    <div className="dropdown">
-                                        <a href="#" className="list-group-item list-group-item-action dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i className="fas fa-walking"></i> Collectors</a>
-                                        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                            <a className="dropdown-item" href="/rev/viewtollcollectors">View Toll Collectors</a>
-                                            <div className="dropdown-divider"></div>
-                                            <a className="dropdown-item" href="/rev/tracktollcollectors">Track Toll Collectors</a>
 
                                         </div>
 
@@ -104,7 +99,7 @@ class Accounts extends Component {
                             </div>
                             <div className="col-md-9">
                                 <div className="card ">
-                                    <h5 className="card-header main-color-bg" style={{ border: 'none' }}>Accounts</h5>
+                                    <h5 className="card-header main-color-bg" style={{ border: 'none' }}> Section Accounts</h5>
                                     <div className="card-body">
                                         <div className="container">
                                             <div className="row">
@@ -177,7 +172,7 @@ class Accounts extends Component {
                                 <div className="mt-2">
                                     <div className="card">
 
-                                        <h5 className="card-header main-color-bg" style={{ border: 'none' }}>Toll Distribution</h5>
+                                        <h5 className="card-header main-color-bg" style={{ border: 'none' }}> Section Toll Distribution</h5>
                                         <div className="card-body">
                                             <div className="col-md-9">
                                                 <BarChart />
@@ -215,4 +210,4 @@ class Accounts extends Component {
 
 
 }
-export default Accounts;
+export default SecAccount;
